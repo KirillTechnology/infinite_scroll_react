@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import './App.css';
 import useBookSearch from './hooks/useBookSearch.js';
 
@@ -62,7 +62,7 @@ function App() {
         {loading && <p style={{ fontWeight: 'bold' }}>Loading...</p>}
         {error && <p style={{ fontWeight: 'bold', color: 'red' }}>Error!</p>}
         <br />
-        {query && !loading && !hasMore && <p>---------- THE END ----------</p>}
+        {query && !loading && !hasMore && <p style={{ fontWeight: 'bold' }}>---------- THE END ----------</p>}
         <br />
       </div>
     </div>
